@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mainText">Welcome to Med-Fleet App\n By pressing the button below, you are requesting a drone carrying a first-aid kit be dispatched to your current location\n Please rand the severity of hte emergency from 1 (not urgent) to 5 (your just about dead)</string>
+    <string name="urlPost">http://104.43.172.127:3000/tickets</string>
+</resources>

@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<asce-network version="1.0"><general>
+		<project-version><![CDATA[1]]></project-version>
+		<project-name><![CDATA[Med-Fleet Safety Assurance Case]]></project-name>
+		<project-description><![CDATA[Assurance Cases for Med-Fleet]]></project-description>
+		<project-author><![CDATA[Med-Fleet Team]]></project-author>
+		<interpretation-schema><![CDATA[ASCE-GSN 1.3]]></interpretation-schema>
+		<canvas-units>twips</canvas-units>
+		<asce-password></asce-password>
+		<tool-version>4.2.7</tool-version>
+		<font name="Tahoma" size="9pt"/>
+		<manual-attach>False</manual-attach>
+	</general>
+	<nodes><node reference="N10566765">
+			<layout x="360" y="15345" height="2220" width="2220"/>
+			<type>2</type>
+			<user-id><![CDATA[Solution]]></user-id>
+			<user-title><![CDATA[Monitoring/Alerting system will be active on all Med-Fleet components]]></user-title>
+			<status-fields>
+				<status-field type="boolean" name="hasexternalreference"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresdevelopment"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresinstantiation"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="completed"><![CDATA[False]]></status-field>
+				<status-field type="string" name="resourced"><![CDATA[]]></status-field>
+				<status-field type="string" name="comments"><![CDATA[]]></status-field>
+				<status-field type="long" name="risk"><![CDATA[1]]></status-field>
+				<status-field type="string" name="confidence"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum1"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum2"><![CDATA[Off]]></status-field>
+			</status-fields>
+			<html-annotation><![CDATA[
+<p>&nbsp;</p>
+]]></html-annotation>
+		</node>
+		<node reference="N12130064">
+			<layout x="12120" y="15765" height="3240" width="3240"/>
+			<type>2</type>
+			<user-id><![CDATA[Solution]]></user-id>
+			<user-title><![CDATA[Preventative programming techniques are put into place (ie. try/catch, thread safety, advanced error messaging, etc.)]]></user-title>
+			<status-fields>
+				<status-field type="boolean" name="hasexternalreference"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresdevelopment"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresinstantiation"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="completed"><![CDATA[False]]></status-field>
+				<status-field type="string" name="resourced"><![CDATA[]]></status-field>
+				<status-field type="string" name="comments"><![CDATA[]]></status-field>
+				<status-field type="long" name="risk"><![CDATA[1]]></status-field>
+				<status-field type="string" name="confidence"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum1"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum2"><![CDATA[Off]]></status-field>
+			</status-fields>
+			<html-annotation><![CDATA[
+<p>&nbsp;</p>
+]]></html-annotation>
+		</node>
+		<node reference="N1254791">
+			<layout x="2640" y="12615" height="2685" width="2685"/>
+			<type>2</type>
+			<user-id><![CDATA[Solution]]></user-id>
+			<user-title><![CDATA[Cloud IaaS platform where Med-Fleet server is running allows easy scalability]]></user-title>
+			<status-fields>
+				<status-field type="boolean" name="hasexternalreference"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresdevelopment"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresinstantiation"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="completed"><![CDATA[False]]></status-field>
+				<status-field type="string" name="resourced"><![CDATA[]]></status-field>
+				<status-field type="string" name="comments"><![CDATA[]]></status-field>
+				<status-field type="long" name="risk"><![CDATA[1]]></status-field>
+				<status-field type="string" name="confidence"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum1"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum2"><![CDATA[Off]]></status-field>
+			</status-fields>
+			<html-annotation><![CDATA[
+<p>&nbsp;</p>
+]]></html-annotation>
+		</node>
+		<node reference="N18637443">
+			<layout x="25140" y="11880" height="2085" width="2085"/>
+			<type>2</type>
+			<user-id><![CDATA[Solution]]></user-id>
+			<user-title><![CDATA[Requester can verify ticket data through visual Map representation]]></user-title>
+			<status-fields>
+				<status-field type="boolean" name="hasexternalreference"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresdevelopment"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresinstantiation"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="completed"><![CDATA[False]]></status-field>
+				<status-field type="string" name="resourced"><![CDATA[]]></status-field>
+				<status-field type="string" name="comments"><![CDATA[]]></status-field>
+				<status-field type="long" name="risk"><![CDATA[1]]></status-field>
+				<status-field type="string" name="confidence"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum1"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum2"><![CDATA[Off]]></status-field>
+			</status-fields>
+			<html-annotation><![CDATA[
+<p>&nbsp;</p>
+]]></html-annotation>
+		</node>
+		<node reference="N24008161">
+			<layout x="21330" y="6750" height="1620" width="2415"/>
+			<type>4</type>
+			<user-id><![CDATA[Assumption]]></user-id>
+			<user-title><![CDATA[FAA and HIPAA Regulations will be enforced]]></user-title>
+			<status-fields>
+				<status-field type="boolean" name="hasexternalreference"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresdevelopment"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresinstantiation"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="completed"><![CDATA[False]]></status-field>
+				<status-field type="string" name="resourced"><![CDATA[]]></status-field>
+				<status-field type="string" name="comments"><![CDATA[]]></status-field>
+				<status-field type="long" name="risk"><![CDATA[1]]></status-field>
+				<status-field type="string" name="confidence"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum1"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum2"><![CDATA[Off]]></status-field>
+			</status-fields>
+			<html-annotation><![CDATA[
+<p>&nbsp;</p>
+]]></html-annotation>
+		</node>
+		<node reference="N24477178">
+			<layout x="12165" y="4575" height="3165" width="3015"/>
+			<type>3</type>
+			<user-id><![CDATA[Strategy]]></user-id>
+			<user-title><![CDATA[Develop preventative logic to eliminate collisions]]></user-title>
+			<status-fields>
+				<status-field type="boolean" name="hasexternalreference"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresdevelopment"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresinstantiation"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="completed"><![CDATA[False]]></status-field>
+				<status-field type="string" name="resourced"><![CDATA[]]></status-field>
+				<status-field type="string" name="comments"><![CDATA[]]></status-field>
+				<status-field type="long" name="risk"><![CDATA[1]]></status-field>
+				<status-field type="string" name="confidence"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum1"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum2"><![CDATA[Off]]></status-field>
+			</status-fields>
+			<html-annotation><![CDATA[
+<p><a class="ASCE-Embedded" href="N57599491.htm#" nodeid="N57599491" subnodeid="">N57599491 - Med-Fleet system can safely support multiple drones</a><a class="ASCE-Embedded" href="N62909687.htm#" nodeid="N62909687" subnodeid="">Sub-Goal - Med-Fleet System can prevent in-air collisions between drones</a></p>
+]]></html-annotation>
+		</node>
+		<node reference="N24684042">
+			<layout x="9915" y="15330" height="2100" width="2100"/>
+			<type>2</type>
+			<user-id><![CDATA[Solution]]></user-id>
+			<user-title><![CDATA[A robust log is created of all errors to further evaluate]]></user-title>
+			<status-fields>
+				<status-field type="boolean" name="hasexternalreference"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresdevelopment"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresinstantiation"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="completed"><![CDATA[False]]></status-field>
+				<status-field type="string" name="resourced"><![CDATA[]]></status-field>
+				<status-field type="string" name="comments"><![CDATA[]]></status-field>
+				<status-field type="long" name="risk"><![CDATA[1]]></status-field>
+				<status-field type="string" name="confidence"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum1"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum2"><![CDATA[Off]]></status-field>
+			</status-fields>
+			<html-annotation><![CDATA[
+<p>&nbsp;</p>
+]]></html-annotation>
+		</node>
+		<node reference="N28097481">
+			<layout x="1230" y="7305" height="2385" width="2385"/>
+			<type>1</type>
+			<user-id><![CDATA[Sub-Goal]]></user-id>
+			<user-title><![CDATA[Med-Fleet System can sustain large data transfer and constant communication]]></user-title>
+			<status-fields>
+				<status-field type="boolean" name="hasexternalreference"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresdevelopment"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresinstantiation"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="completed"><![CDATA[False]]></status-field>
+				<status-field type="string" name="resourced"><![CDATA[]]></status-field>
+				<status-field type="string" name="comments"><![CDATA[]]></status-field>
+				<status-field type="long" name="risk"><![CDATA[1]]></status-field>
+				<status-field type="string" name="confidence"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum1"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum2"><![CDATA[Off]]></status-field>
+			</status-fields>
+			<html-annotation><![CDATA[
+<p><a class="ASCE-Embedded" href="N10566765.htm#" nodeid="N10566765" subnodeid="">Solution - Monitoring/Alerting system will be active on all Med-Fleet components</a><a class="ASCE-Embedded" href="N1254791.htm#" nodeid="N1254791" subnodeid="">Solution - Cloud IaaS platform where Med-Fleet server is running allows easy scalability</a></p>
+]]></html-annotation>
+		</node>
+		<node reference="N29509366">
+			<layout x="2430" y="17880" height="2880" width="2880"/>
+			<type>2</type>
+			<user-id><![CDATA[Solution]]></user-id>
+			<user-title><![CDATA[Requester can verify ticket data through visual Map representation]]></user-title>
+			<status-fields>
+				<status-field type="boolean" name="hasexternalreference"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresdevelopment"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresinstantiation"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="completed"><![CDATA[False]]></status-field>
+				<status-field type="string" name="resourced"><![CDATA[]]></status-field>
+				<status-field type="string" name="comments"><![CDATA[]]></status-field>
+				<status-field type="long" name="risk"><![CDATA[1]]></status-field>
+				<status-field type="string" name="confidence"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum1"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum2"><![CDATA[Off]]></status-field>
+			</status-fields>
+			<html-annotation><![CDATA[
+<p>&nbsp;</p>
+]]></html-annotation>
+		</node>
+		<node reference="N37248075">
+			<layout x="21000" y="3900" height="1875" width="3300"/>
+			<type>3</type>
+			<user-id><![CDATA[Strategy]]></user-id>
+			<user-title><![CDATA[Drones succesfully reach help requestors]]></user-title>
+			<status-fields>
+				<status-field type="boolean" name="hasexternalreference"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresdevelopment"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresinstantiation"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="completed"><![CDATA[False]]></status-field>
+				<status-field type="string" name="resourced"><![CDATA[]]></status-field>
+				<status-field type="string" name="comments"><![CDATA[]]></status-field>
+				<status-field type="long" name="risk"><![CDATA[1]]></status-field>
+				<status-field type="string" name="confidence"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum1"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum2"><![CDATA[Off]]></status-field>
+			</status-fields>
+			<html-annotation><![CDATA[
+<p><a class="ASCE-Embedded" href="N74744880.htm#" nodeid="N74744880" subnodeid="">Sub-Goal - Phone sends GPS Coords of person in need to Ticketing Sytem</a></p>
+]]></html-annotation>
+		</node>
+		<node reference="N37883592">
+			<layout x="6360" y="18675" height="2700" width="2700"/>
+			<type>2</type>
+			<user-id><![CDATA[Solution]]></user-id>
+			<user-title><![CDATA[Ground Control captures Drone Data and sends it to Med-Fleet Database]]></user-title>
+			<status-fields>
+				<status-field type="boolean" name="hasexternalreference"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresdevelopment"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresinstantiation"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="completed"><![CDATA[False]]></status-field>
+				<status-field type="string" name="resourced"><![CDATA[]]></status-field>
+				<status-field type="string" name="comments"><![CDATA[]]></status-field>
+				<status-field type="long" name="risk"><![CDATA[1]]></status-field>
+				<status-field type="string" name="confidence"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum1"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum2"><![CDATA[Off]]></status-field>
+			</status-fields>
+			<html-annotation><![CDATA[
+<p>&nbsp;</p>
+]]></html-annotation>
+		</node>
+		<node reference="N43765366">
+			<layout x="21390" y="16905" height="2190" width="2190"/>
+			<type>2</type>
+			<user-id><![CDATA[Solution]]></user-id>
+			<user-title><![CDATA[Use Waterfall approach for safety critical components]]></user-title>
+			<status-fields>
+				<status-field type="boolean" name="hasexternalreference"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresdevelopment"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresinstantiation"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="completed"><![CDATA[False]]></status-field>
+				<status-field type="string" name="resourced"><![CDATA[]]></status-field>
+				<status-field type="string" name="comments"><![CDATA[]]></status-field>
+				<status-field type="long" name="risk"><![CDATA[1]]></status-field>
+				<status-field type="string" name="confidence"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum1"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum2"><![CDATA[Off]]></status-field>
+			</status-fields>
+			<html-annotation><![CDATA[
+<p>&nbsp;</p>
+]]></html-annotation>
+		</node>
+		<node reference="N4797870">
+			<layout x="28800" y="10950" height="3075" width="3075"/>
+			<type>2</type>
+			<user-id><![CDATA[Solution]]></user-id>
+			<user-title><![CDATA[Med-Fleet notifies Search and Rescue teams of requester GPS in case an emergency response team is needed]]></user-title>
+			<status-fields>
+				<status-field type="boolean" name="hasexternalreference"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresdevelopment"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresinstantiation"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="completed"><![CDATA[False]]></status-field>
+				<status-field type="string" name="resourced"><![CDATA[]]></status-field>
+				<status-field type="string" name="comments"><![CDATA[]]></status-field>
+				<status-field type="long" name="risk"><![CDATA[1]]></status-field>
+				<status-field type="string" name="confidence"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum1"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum2"><![CDATA[Off]]></status-field>
+			</status-fields>
+			<html-annotation><![CDATA[
+<p>&nbsp;</p>
+]]></html-annotation>
+		</node>
+		<node reference="N49579310">
+			<layout x="22395" y="13095" height="2175" width="2175"/>
+			<type>1</type>
+			<user-id><![CDATA[Sub-Goal]]></user-id>
+			<user-title><![CDATA[Create hybrid environment for project]]></user-title>
+			<status-fields>
+				<status-field type="boolean" name="hasexternalreference"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresdevelopment"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresinstantiation"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="completed"><![CDATA[False]]></status-field>
+				<status-field type="string" name="resourced"><![CDATA[]]></status-field>
+				<status-field type="string" name="comments"><![CDATA[]]></status-field>
+				<status-field type="long" name="risk"><![CDATA[1]]></status-field>
+				<status-field type="string" name="confidence"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum1"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum2"><![CDATA[Off]]></status-field>
+			</status-fields>
+			<html-annotation><![CDATA[
+<p><a class="ASCE-Embedded" href="N96895838.htm#" nodeid="N96895838" subnodeid="">Solution - Use Agile approach for&nbsp; software development</a><a class="ASCE-Embedded" href="N43765366.htm#" nodeid="N43765366" subnodeid="">Solution - Use waterfall approach for safety critical components</a></p>
+]]></html-annotation>
+		</node>
+		<node reference="N50250041">
+			<layout x="1260" y="3690" height="1875" width="2445"/>
+			<type>4</type>
+			<user-id><![CDATA[Assumption]]></user-id>
+			<user-title><![CDATA[Drones can only fly within 1 mile radius of Base]]></user-title>
+			<status-fields>
+				<status-field type="boolean" name="hasexternalreference"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresdevelopment"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresinstantiation"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="completed"><![CDATA[False]]></status-field>
+				<status-field type="string" name="resourced"><![CDATA[]]></status-field>
+				<status-field type="string" name="comments"><![CDATA[]]></status-field>
+				<status-field type="long" name="risk"><![CDATA[1]]></status-field>
+				<status-field type="string" name="confidence"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum1"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum2"><![CDATA[Off]]></status-field>
+			</status-fields>
+			<html-annotation><![CDATA[
+<p>&nbsp;</p>
+]]></html-annotation>
+		</node>
+		<node reference="N54037744">
+			<layout x="15840" y="4125" height="2835" width="2835"/>
+			<type>3</type>
+			<user-id><![CDATA[Strategy]]></user-id>
+			<user-title><![CDATA[Use specially tailored methodology to guide project deliverables]]></user-title>
+			<status-fields>
+				<status-field type="boolean" name="hasexternalreference"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresdevelopment"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresinstantiation"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="completed"><![CDATA[False]]></status-field>
+				<status-field type="string" name="resourced"><![CDATA[]]></status-field>
+				<status-field type="string" name="comments"><![CDATA[]]></status-field>
+				<status-field type="long" name="risk"><![CDATA[1]]></status-field>
+				<status-field type="string" name="confidence"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum1"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum2"><![CDATA[Off]]></status-field>
+			</status-fields>
+			<html-annotation><![CDATA[
+<p><a class="ASCE-Embedded" href="N24008161.htm#" nodeid="N24008161" subnodeid="">Assumption - FAA and HIPAA Regulations will be enforced</a><a class="ASCE-Embedded" href="N76916492.htm#" nodeid="N76916492" subnodeid="">Sub-Goal - Med-Fleet Project will not be lengthily delayed due to safety restrictions</a><a class="ASCE-Embedded" href="N6515306.htm#" nodeid="N6515306" subnodeid="">Strategy - Acknowledge all potential safety regulations upfront</a></p>
+]]></html-annotation>
+		</node>
+		<node reference="N54239708">
+			<layout x="7170" y="4125" height="3165" width="3330"/>
+			<type>3</type>
+			<user-id><![CDATA[Strategy]]></user-id>
+			<user-title><![CDATA[Keep track of Drones and Drone Data]]></user-title>
+			<status-fields>
+				<status-field type="boolean" name="hasexternalreference"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresdevelopment"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresinstantiation"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="completed"><![CDATA[False]]></status-field>
+				<status-field type="string" name="resourced"><![CDATA[]]></status-field>
+				<status-field type="string" name="comments"><![CDATA[]]></status-field>
+				<status-field type="long" name="risk"><![CDATA[1]]></status-field>
+				<status-field type="string" name="confidence"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum1"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum2"><![CDATA[Off]]></status-field>
+			</status-fields>
+			<html-annotation><![CDATA[
+<p><a class="ASCE-Embedded" href="N74791884.htm#" nodeid="N74791884" subnodeid="">N74791884 - Sub-Goal 1</a><a class="ASCE-Embedded" href="N57599491.htm#" nodeid="N57599491" subnodeid="">Sub-Goal - Med-Fleet system can recognize low battery</a><a class="ASCE-Embedded" href="N50250041.htm#" nodeid="N50250041" subnodeid="">Assumption - Drones can only fly within 1 mile radius of Base</a><a class="ASCE-Embedded" href="N28097481.htm#" nodeid="N28097481" subnodeid="">Sub-Goal - Med-Fleet System can sustain large data transfer and constant communication</a></p>
+]]></html-annotation>
+		</node>
+		<node reference="N57599491">
+			<layout x="9945" y="10320" height="2280" width="2685"/>
+			<type>1</type>
+			<user-id><![CDATA[Sub-Goal]]></user-id>
+			<user-title><![CDATA[Med-Fleet system can recognize low battery]]></user-title>
+			<status-fields>
+				<status-field type="boolean" name="hasexternalreference"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresdevelopment"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresinstantiation"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="completed"><![CDATA[False]]></status-field>
+				<status-field type="string" name="resourced"><![CDATA[]]></status-field>
+				<status-field type="string" name="comments"><![CDATA[]]></status-field>
+				<status-field type="long" name="risk"><![CDATA[1]]></status-field>
+				<status-field type="string" name="confidence"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum1"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum2"><![CDATA[Off]]></status-field>
+			</status-fields>
+			<html-annotation><![CDATA[
+<p><a class="ASCE-Embedded" href="N37883592.htm#" nodeid="N37883592" subnodeid="">N37883592 - Mission Control and Ground Control coordinate scheduling of drones</a><a class="ASCE-Embedded" href="N58000982.htm#" nodeid="N58000982" subnodeid="">Solution - Drones send heart-beat signal back to Ground Control</a></p>
+]]></html-annotation>
+		</node>
+		<node reference="N58000982">
+			<layout x="6270" y="15600" height="2220" width="2205"/>
+			<type>4</type>
+			<user-id><![CDATA[Solution]]></user-id>
+			<user-title><![CDATA[Drones send heart-beat signal back to Ground Control ]]></user-title>
+			<status-fields>
+				<status-field type="boolean" name="hasexternalreference"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresdevelopment"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresinstantiation"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="completed"><![CDATA[False]]></status-field>
+				<status-field type="string" name="resourced"><![CDATA[]]></status-field>
+				<status-field type="string" name="comments"><![CDATA[]]></status-field>
+				<status-field type="long" name="risk"><![CDATA[1]]></status-field>
+				<status-field type="string" name="confidence"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum1"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum2"><![CDATA[Off]]></status-field>
+			</status-fields>
+			<html-annotation><![CDATA[
+<p>&nbsp;</p>
+]]></html-annotation>
+		</node>
+		<node reference="N62909687">
+			<layout x="14220" y="10665" height="2175" width="2040"/>
+			<type>1</type>
+			<user-id><![CDATA[Sub-Goal]]></user-id>
+			<user-title><![CDATA[Med-Fleet System can prevent in-air collisions between drones]]></user-title>
+			<status-fields>
+				<status-field type="boolean" name="hasexternalreference"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresdevelopment"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresinstantiation"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="completed"><![CDATA[False]]></status-field>
+				<status-field type="string" name="resourced"><![CDATA[]]></status-field>
+				<status-field type="string" name="comments"><![CDATA[]]></status-field>
+				<status-field type="long" name="risk"><![CDATA[1]]></status-field>
+				<status-field type="string" name="confidence"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum1"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum2"><![CDATA[Off]]></status-field>
+			</status-fields>
+			<html-annotation><![CDATA[
+<p><a class="ASCE-Embedded" href="N24684042.htm#" nodeid="N24684042" subnodeid="">Solution - A robust log is created of all errors to further evaluate</a><a class="ASCE-Embedded" href="N12130064.htm#" nodeid="N12130064" subnodeid="">Solution - Preventative programming techniques are put into place (ie. try/catch, thread safety, advanced error messaging, etc.)</a><a class="ASCE-Embedded" href="N89282739.htm#" nodeid="N89282739" subnodeid="">Solution - Throughly test drones during simultaneous flight</a><a class="ASCE-Embedded" href="N76347339.htm#" nodeid="N76347339" subnodeid="">Solution - Throughly test individual drones before deploying to fleet</a></p>
+]]></html-annotation>
+		</node>
+		<node reference="N6515306">
+			<layout x="17040" y="8595" height="2550" width="2400"/>
+			<type>3</type>
+			<user-id><![CDATA[Strategy]]></user-id>
+			<user-title><![CDATA[Acknowledge all potential safety regulations upfront]]></user-title>
+			<status-fields>
+				<status-field type="boolean" name="hasexternalreference"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresdevelopment"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresinstantiation"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="completed"><![CDATA[False]]></status-field>
+				<status-field type="string" name="resourced"><![CDATA[]]></status-field>
+				<status-field type="string" name="comments"><![CDATA[]]></status-field>
+				<status-field type="long" name="risk"><![CDATA[1]]></status-field>
+				<status-field type="string" name="confidence"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum1"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum2"><![CDATA[Off]]></status-field>
+			</status-fields>
+			<html-annotation><![CDATA[
+<p><a class="ASCE-Embedded" href="N76916492.htm#" nodeid="N76916492" subnodeid="">Sub-Goal - Med-Fleet Project will not be lengthily delayed due to safety restrictions</a></p>
+]]></html-annotation>
+		</node>
+		<node reference="N74744880">
+			<layout x="25845" y="6675" height="1995" width="2010"/>
+			<type>1</type>
+			<user-id><![CDATA[Sub-Goal]]></user-id>
+			<user-title><![CDATA[Phone sends GPS Coords of person in need to Ticketing Sytem]]></user-title>
+			<status-fields>
+				<status-field type="boolean" name="hasexternalreference"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresdevelopment"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresinstantiation"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="completed"><![CDATA[False]]></status-field>
+				<status-field type="string" name="resourced"><![CDATA[]]></status-field>
+				<status-field type="string" name="comments"><![CDATA[]]></status-field>
+				<status-field type="long" name="risk"><![CDATA[1]]></status-field>
+				<status-field type="string" name="confidence"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum1"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum2"><![CDATA[Off]]></status-field>
+			</status-fields>
+			<html-annotation><![CDATA[
+<p><a class="ASCE-Embedded" href="N18637443.htm#" nodeid="N18637443" subnodeid="">Solution - Requester can verify ticket data through visual Map representation</a><a class="ASCE-Embedded" href="N4797870.htm#" nodeid="N4797870" subnodeid="">Solution - Med-Fleet notifies Search and Rescue teams of requester GPS in case an emergency response team is needed</a></p>
+]]></html-annotation>
+		</node>
+		<node reference="N74791884">
+			<layout x="6000" y="10320" height="2055" width="2610"/>
+			<type>1</type>
+			<user-id><![CDATA[Sub-Goal]]></user-id>
+			<user-title><![CDATA[Med Fleet Database saves data of all missions]]></user-title>
+			<status-fields>
+				<status-field type="boolean" name="hasexternalreference"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresdevelopment"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresinstantiation"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="completed"><![CDATA[False]]></status-field>
+				<status-field type="string" name="resourced"><![CDATA[]]></status-field>
+				<status-field type="string" name="comments"><![CDATA[]]></status-field>
+				<status-field type="long" name="risk"><![CDATA[1]]></status-field>
+				<status-field type="string" name="confidence"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum1"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum2"><![CDATA[Off]]></status-field>
+			</status-fields>
+			<html-annotation><![CDATA[
+<p><a class="ASCE-Embedded" href="N29509366.htm#" nodeid="N29509366" subnodeid="">N29509366 - Requester can verify ticket data through visual Map representation</a></p>
+]]></html-annotation>
+		</node>
+		<node reference="N75239080">
+			<layout x="14865" y="450" height="2640" width="3090"/>
+			<type>1</type>
+			<user-id><![CDATA[Main Goal]]></user-id>
+			<user-title><![CDATA[Med-Fleet System is safe enough to successfully support multiple drones]]></user-title>
+			<status-fields>
+				<status-field type="boolean" name="hasexternalreference"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresdevelopment"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresinstantiation"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="completed"><![CDATA[False]]></status-field>
+				<status-field type="string" name="resourced"><![CDATA[]]></status-field>
+				<status-field type="string" name="comments"><![CDATA[]]></status-field>
+				<status-field type="long" name="risk"><![CDATA[1]]></status-field>
+				<status-field type="string" name="confidence"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum1"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum2"><![CDATA[Off]]></status-field>
+			</status-fields>
+			<html-annotation><![CDATA[
+<p><a class="ASCE-Embedded" href="N54239708.htm#" nodeid="N54239708" subnodeid="">N54239708 - Take proper pre-flight precautions</a>Med-Fleet Drone is safe<a class="ASCE-Embedded" href="N89788008.htm#" nodeid="N89788008" subnodeid="">N89788008 - Assumption1</a><a class="ASCE-Embedded" href="N24477178.htm#" nodeid="N24477178" subnodeid="">N24477178 - Develop preventative logic to eliminate collisions</a><a class="ASCE-Embedded" href="N54037744.htm#" nodeid="N54037744" subnodeid="">Strategy - Use specially tailored methodology to guide project deliverables</a><a class="ASCE-Embedded" href="N37248075.htm#" nodeid="N37248075" subnodeid="">Strategy - Drones succesfully reach help requestors</a></p>
+]]></html-annotation>
+		</node>
+		<node reference="N76347339">
+			<layout x="18585" y="13170" height="2145" width="2145"/>
+			<type>2</type>
+			<user-id><![CDATA[Solution]]></user-id>
+			<user-title><![CDATA[Throughly test individual drones before deploying to fleet]]></user-title>
+			<status-fields>
+				<status-field type="boolean" name="hasexternalreference"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresdevelopment"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresinstantiation"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="completed"><![CDATA[False]]></status-field>
+				<status-field type="string" name="resourced"><![CDATA[]]></status-field>
+				<status-field type="string" name="comments"><![CDATA[]]></status-field>
+				<status-field type="long" name="risk"><![CDATA[1]]></status-field>
+				<status-field type="string" name="confidence"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum1"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum2"><![CDATA[Off]]></status-field>
+			</status-fields>
+			<html-annotation><![CDATA[
+<p>&nbsp;</p>
+]]></html-annotation>
+		</node>
+		<node reference="N76916492">
+			<layout x="21750" y="9915" height="2010" width="2295"/>
+			<type>1</type>
+			<user-id><![CDATA[Sub-Goal]]></user-id>
+			<user-title><![CDATA[Med-Fleet Project will not be lengthily delayed due to safety restrictions ]]></user-title>
+			<status-fields>
+				<status-field type="boolean" name="hasexternalreference"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresdevelopment"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresinstantiation"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="completed"><![CDATA[False]]></status-field>
+				<status-field type="string" name="resourced"><![CDATA[]]></status-field>
+				<status-field type="string" name="comments"><![CDATA[]]></status-field>
+				<status-field type="long" name="risk"><![CDATA[1]]></status-field>
+				<status-field type="string" name="confidence"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum1"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum2"><![CDATA[Off]]></status-field>
+			</status-fields>
+			<html-annotation><![CDATA[
+<p><a class="ASCE-Embedded" href="N49579310.htm#" nodeid="N49579310" subnodeid="">Sub-Goal - Create hybrid environment for project</a></p>
+]]></html-annotation>
+		</node>
+		<node reference="N89282739">
+			<layout x="16260" y="15705" height="2130" width="2130"/>
+			<type>2</type>
+			<user-id><![CDATA[Solution]]></user-id>
+			<user-title><![CDATA[Throughly test drones during simultaneous flight]]></user-title>
+			<status-fields>
+				<status-field type="boolean" name="hasexternalreference"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresdevelopment"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresinstantiation"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="completed"><![CDATA[False]]></status-field>
+				<status-field type="string" name="resourced"><![CDATA[]]></status-field>
+				<status-field type="string" name="comments"><![CDATA[]]></status-field>
+				<status-field type="long" name="risk"><![CDATA[1]]></status-field>
+				<status-field type="string" name="confidence"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum1"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum2"><![CDATA[Off]]></status-field>
+			</status-fields>
+			<html-annotation><![CDATA[
+<p>&nbsp;</p>
+]]></html-annotation>
+		</node>
+		<node reference="N89788008">
+			<layout x="22725" y="675" height="2040" width="4140"/>
+			<type>4</type>
+			<user-id><![CDATA[Assumptions]]></user-id>
+			<user-title><![CDATA[All systems have internet access; All systems are connected; All information sent is correct;]]></user-title>
+			<status-fields>
+				<status-field type="boolean" name="hasexternalreference"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresdevelopment"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresinstantiation"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="completed"><![CDATA[False]]></status-field>
+				<status-field type="string" name="resourced"><![CDATA[]]></status-field>
+				<status-field type="string" name="comments"><![CDATA[]]></status-field>
+				<status-field type="long" name="risk"><![CDATA[1]]></status-field>
+				<status-field type="string" name="confidence"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum1"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum2"><![CDATA[Off]]></status-field>
+			</status-fields>
+			<html-annotation><![CDATA[
+<p><a class="ASCE-Embedded" href="N89788008.htm#" nodeid="N89788008" subnodeid="">N89788008 - Assumption1</a>&nbsp; Weather is okay</p>
+]]></html-annotation>
+		</node>
+		<node reference="N96895838">
+			<layout x="25350" y="16530" height="2130" width="2130"/>
+			<type>2</type>
+			<user-id><![CDATA[Solution]]></user-id>
+			<user-title><![CDATA[Use Agile approach for  software development]]></user-title>
+			<status-fields>
+				<status-field type="boolean" name="hasexternalreference"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresdevelopment"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="requiresinstantiation"><![CDATA[False]]></status-field>
+				<status-field type="boolean" name="completed"><![CDATA[False]]></status-field>
+				<status-field type="string" name="resourced"><![CDATA[]]></status-field>
+				<status-field type="string" name="comments"><![CDATA[]]></status-field>
+				<status-field type="long" name="risk"><![CDATA[1]]></status-field>
+				<status-field type="string" name="confidence"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum1"><![CDATA[Off]]></status-field>
+				<status-field type="string" name="spectrum2"><![CDATA[Off]]></status-field>
+			</status-fields>
+			<html-annotation><![CDATA[
+<p>&nbsp;</p>
+]]></html-annotation>
+		</node>
+	</nodes><links/><views/><embedded-images/><export-paths/></asce-network>

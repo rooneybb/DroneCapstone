@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<meta charset="UTF-8">
+    <title>MedFleet</title>
+</head>
+<body>
+<div class="col-md-9">
+<h1>
+Safety Analysis
+</h1><p>
+The Med-Fleet team undertook this project with the understanding that the Med-Fleet system would need to meet the stringent requirements of a Safety-Critical system.  One of the main goals of all three of our sprints was to ensure great emphasis was placed on not only the thorough analyzation of all potential risks, but also taking the proper precautions to mitigate such risks.  Unfortunately due to lack of resources and time, many of these policies were unfortunately only theoretical in nature, however that does not take away their overall importance and effect they had on the design of the Med-Fleet system.  Nonetheless, the Med-Fleet team was able to put their best effort towards incorporating as many tangible safety features as proved feasible.
+</p><p>
+The Med-Fleet system is considered a Safety-Critical system for the potential consequences that a failure of the system could cause, with a worse-case scenario being fatal.  In addition to the grave consequences any number of errors could cause, Med-Fleet also operates within two highly regulated fields, the aerospace and medical industries.  With strict oversight from agencies such as the Federal Aviation Administration (FAA) and Centers for Medicare and Medicaid (CMM) whom enforces the Health Insurance Portability and Accountability Act (HIPAA), the Med-Fleet system is burdened with even further liability.
+</p><p>
+To address these important issues, at the beginning of the project, the team created a Failure Mode Effects and Criticality Analysis (FMECA).  In this document, the team addressed many of the possible issues that the system could experience.  These issues were then further dissected to better understand the effects the system might experience and the likely causes behind these problems.  With this comprehensive review of the conceivable flaws in the Med-Fleet system, the team was better able to grasp the necessary steps to rid, if possible, or otherwise relieve any potential negative impact.  The Med-Fleet team prepared for a wide scope of possible system failures. From the seemingly ridiculous, like an eagle attack on a drone, to the more realistic, such as a server crashing, the team’s goal had been to create a system prepared to handle all negative scenarios.  Through such analysis the Med-Fleet team was able to incorporate rigid safety features into the design of all aspects of the system.  This approach affords the Med-Fleet system an easier path to appeasing FAA and CMM requirements when scaling up to a full production environment in the future.
+</p><p>
+As the team moved forward and began to integrate such safety precautions into the Med-Fleet system, the major problems were partitioned into three separate categories so that each issue could be approached in a more efficient manner.  The three categories were hardware, software, and regulatory issues.
+</p><p>
+To attack hardware related issues, the Med-Fleet team employed numerous techniques.  A lightweight-monitoring platform watching over several aspects of our system was set up through a Jenkins server.  Our Med-Fleet monitor was created to watch over drones in real-time as they are deployed on missions.  This could be used to manually override any major issues in the future, much like radar for an air-traffic controller.  In addition to monitoring, physical inspection of drones were conducted before all flights.  For the phone app many different android devices were used to check for any OS compatibility issues.  In addition to these proactive steps, the Med-Fleet team also set up two field tests to inspect the system as a whole.  The overall goal, although unachievable due to lack of time and resources, would be to ensure that the Med-Fleet system is not only highly available, but also in the case of down time, to have a full failover system set up.  As the team found out when the main server became inaccessible during one of the sprints, the entire Med-Fleet codebase is already very portable, allowing for easier migration if a failover was in place.  In addition to these necessities, it would be vital to set up extensive monitoring of services, memory, and performance of all servers that are a part of the Med-Fleet system.
+</p><p>
+Software issues were initially addressed by the developers, whom put their respective code through numerous tests.  Upon release to GitHub, black-box testing was able to be done by other members of the team.  The Jenkins server used for monitoring also served as an automated testing platform for several aspects of the med-Fleet system. However the most critical resource the MedFleet team was able to use for software testing was a drone simulation program called Software in the Loop (SITL).  By syncing up the Med-Fleet system to SITL, the team was able to continuously test changes to code in a near realistic environment. The Med-Fleet team looked at the simulations completed in SITL as confidence that code was behaving as expected.  Leveraging the success of these analyses allowed the team to conduct the field tests mentioned above.  This site’s testing section gives a general overview of other techniques also used to ensure proper functionality of the Med-Fleet system.
+</p><p>
+The Med-Fleet team was probably the least successful in implementing solutions to Regulatory issues as they are rather extensive and complicated to understand without legal aid.  Rather than neglecting these completely, the Med-Fleet team placed a large emphasis on the importance of safety throughout development.  While maintaining an agile environment during our sprints, it was noted that to best implement safety features, a more structural waterfall like process should be in place to gather such requirements.  Through this hybrid approach to the design of a Safety-Critical system, it was easier to ensure certain safety requirements were taken into account by developers before creating code.  Some of the self-imposed restrictions the Med-Fleet team planned development around, were all drones needed to be assigned different flying altitudes, separate base stations, and specific flying zones to ensure that even in error the chances of a drone crash would be further limited. Self-imposed regulations such as these not only helped to create a safer system, but also shortened development time, as safety features did not have to be hacked in to an existing codebase, possibly creating even further trouble in the process. Through the employment of such a proactive attitude in preventing software and hardware issues at the beginning of development, the Med-Fleet team theorizes that many of the potential regulatory issues, which would affect a more mature Med-Fleet system, can be largely mitigated.
+</p>
+</div>
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+</html>

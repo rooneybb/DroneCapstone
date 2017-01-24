@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<meta charset="UTF-8">
+	<title>MedFleet</title>
+</head>
+
+<body>
+
+	<h2>Sprint 1 - Proof Of Concept</h2>
+	<table class="table table-striped">
+		<th>User Stories</th>
+		<th>UC#01</th>
+		<th>UC#02</th>
+		<th>UC#03</th>
+		<th>UC#04</th>
+		<th>UC#05</th>
+		<tr>
+			<td>Mission Control needs to establish communication with GroundControl System</td>
+			<td></td>
+			<td>x</td>
+			<td></td>
+			<td></td>
+            <td></td>
+		</tr>
+		<tr>
+			<td>Mission Control shall sort unassigned ticket queue</td>
+			<td></td>
+			<td>x</td>
+			<td></td>
+			<td></td>
+            <td></td>
+		</tr>
+		<tr>
+			<td>Ground Station Shall Connect to Drones</td>
+			<td></td>
+			<td>x</td>
+			<td></td>
+			<td></td>
+            <td></td>
+		</tr>
+		<tr>
+			<td>Ground Station Shall Send drone on mission</td>
+			<td></td>
+			<td>x</td>
+			<td></td>
+			<td></td>
+            <td></td>
+		</tr>
+		<tr>
+			<td>When there are unassigned tickets, Mission Control shall place them in unassigned request queue.</td>
+			<td></td>
+			<td>x</td>
+			<td></td>
+			<td></td>
+            <td></td>
+		</tr>
+		<tr>
+			<td>While any component is operational it shall send a signal to the system to confirm it is online</td>
+			<td></td>
+			<td>x</td>
+			<td></td>
+			<td></td>
+            <td></td>
+		</tr>
+		<tr>
+			<td>While any drone/sites/base stations are active the gui shall display all relevant data</td>
+			<td></td>
+			<td>x</td>
+			<td>x</td>
+			<td></td>
+            <td></td>
+		</tr>
+		<tr>
+			<td>While drones are flying Ground Control shall send data to Mission Control.</td>
+			<td></td>
+			<td></td>
+			<td>x</td>
+			<td></td>
+            <td></td>
+		</tr>
+		<tr>
+			<td>While the Ground Control is connected to drones, the Ground Control shall receive data from Mission Control.</td>
+			<td></td>
+			<td>x</td>
+			<td></td>
+			<td></td>
+            <td></td>
+		</tr>
+		<tr>
+			<td>While the Ground Control is connected to drones, the Ground Control shall send data and commands to drones.</td>
+			<td></td>
+			<td>x</td>
+			<td></td>
+			<td>x</td>
+			<td>x</td>
+		<tr>
+			<td>While the System is running data stall be persistent</td>
+			<td>x</td>
+			<td>x</td>
+			<td></td>
+			<td></td>
+            <td></td>
+		</tr>
+	</table>
+
+	<h2>Sprint 2</h2>
+	<table class="table table-striped">
+		<th>User Stories</th>
+		<th>UC#01</th>
+		<th>UC#02</th>
+		<th>UC#03</th>
+		<th>UC#04</th>
+		<th>UC#05</th>
+		<tr>
+			<td>Ground Station shall assign multiple drop locations to a drone</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td>x</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Ground Station shall command drones using Guided Mode</td>
+			<td></td>
+			<td>x</td>
+			<td></td>
+			<td>x</td>
+			<td>x</td>
+		</tr>
+		<tr>
+			<td>The application shall have an embedded Google Map that shows the users current location.</td>
+			<td>x</td>
+			<td></td>
+			<td>x</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>The embedded Google Map shall allow the user to change where the drone request originates from (using "pin drop" functionality).</td>
+			<td>x</td>
+			<td></td>
+			<td>x</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>The Mission Control shall calculate distance and time for each mission given GPS coordinates and drone speed.</td>
+			<td></td>
+			<td>x</td>
+			<td>x</td>
+			<td>x</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>The Mission Control System shall create a flight zone</td>
+			<td></td>
+			<td>x</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>The Mission Control System shall find the nearest destination next to the current target.</td>
+			<td></td>
+			<td>x</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>The Mission Control system shall fix the concurrency issues</td>
+			<td></td>
+			<td>x</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>The Mission Control System shall process multiple tickets</td>
+			<td></td>
+			<td>x</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>The System shall pass updated pin coordinates to the ticketing system via JSON post request</td>
+			<td>x</td>
+			<td>x</td>
+			<td>x</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>While The system is running the website must update in real time</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+	</table>
+
+	<h2>Sprint 3</h2>
+	<table class="table table-striped">
+		<th>User Stories</th>
+		<th>UC#01</th>
+		<th>UC#02</th>
+		<th>UC#03</th>
+		<th>UC#04</th>
+		<th>UC#05</th>
+		<tr>
+			<td>GroundControl shall receive confirmation from Drone upon MissionCompletion</td>
+			<td></td>
+			<td>x</td>
+			<td></td>
+			<td></td>
+            <td></td>
+		</tr>
+		<tr>
+			<td>GroundControl shall send missions to Drones</td>
+			<td></td>
+			<td>x</td>
+			<td></td>
+			<td></td>
+            <td></td>
+		</tr>
+		<tr>
+			<td>Medfleet monitor shall show all relevant Drone and Mission information</td>
+			<td>x</td>
+			<td>x</td>
+			<td>x</td>
+			<td></td>
+            <td></td>
+		</tr>
+		<tr>
+			<td>PhoneApp shall add confirmation pop-up</td>
+			<td>x</td>
+			<td></td>
+			<td></td>
+			<td></td>
+            <td></td>
+		</tr>
+		<tr>
+			<td>The Database shall hold all global variables.</td>
+			<td></td>
+			<td>x</td>
+			<td></td>
+			<td></td>
+            <td></td>
+		</tr>
+		<tr>
+			<td>The Mission Control System shall process multiple tickets for multiple drones</td>
+			<td></td>
+			<td>x</td>
+			<td></td>
+			<td></td>
+            <td></td>
+		</tr>
+	</table>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+
+</html>

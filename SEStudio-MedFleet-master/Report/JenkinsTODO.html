@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<meta charset="UTF-8">
+    <title>MedFleet</title>
+</head>
+<body>
+<div class="col-md-9">
+<h1>
+JenkinsTODO
+</h1><p>
+1. Download ApacheTomcat (used newest version) to C drive<br>
+2. Download Jenkins WarFile (used newest version)<br>
+3. Place Jenkins WarFile in \webapps directory of ApacheTomcat<br>
+4. Startup ApacheTomcat from \bin directory by running startup.bat<br>
+5. Default Jenkins port is 8080, access by going to localhost:8080/jenkins<br>
+	5a. Create Inbound rule on firewall opening up port 8080 to publicly expose jenkins server, ip:8080/jenkins<br>
+6. Go to Manage Jenkins, then to Manage Plugins<br>
+7. Select Available Tab, search for necessary plugins, Med-Fleet used:<br>
+7a. Github plugin<br>
+--Need to set up link to SAREC-Lab/SEStudio-MedFleet Git Repo<br>
+--Set up repo polling at specified interval, will look for changes, and start specified jobs if diff is found<br>
+7b. Android Emulator Plugin<br>
+--Poll for any changes to PhoneApp folder, pulls code, grabs gradlew file, opens Android emulator and verifies build with each check-in
+7c. HTTP POST Plugin<br>
+-- Send post requests to specified sites, in our case ticketing system<br>
+7d. SiteMonitor Plugin<br>
+-- Monitor any ip, used to lightly monitor all hosts to ensure they have heartbeat<br> 
+7e. Email Extension Plugin (Never got fully working, gmail would block login attmepts, but can tell something is wrong anytime security message is received from google!)<br>
+--Supposed to leverage gmail instead of needing smtp server, to send notifications of failure or no heartbeat, see above<br>
+7f. Maven Plugin (never got fully working)<br>
+--Poll for any changes to MissionControl folder, pulls code, grabs pom file, and verifies build with each check-in<br>
+<br>
+Note: Microsoft Azure Accounts Team disabled the server hosting Jenkins on 6/6/2016 due to spending limit overage.
+If it happens to allow the server back up, you can access at: <a href="http://13.92.102.192:8080/jenkins/ ">http://13.92.102.192:8080/jenkins/</a>  
+</p>
+</div>
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+</html>

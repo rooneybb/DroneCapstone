@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Jane Cleland-Huang</Author>
+  <LastAuthor>Rooney, Brendan</LastAuthor>
+  <Created>2015-12-23T13:42:43Z</Created>
+  <LastSaved>2016-04-26T05:54:03Z</LastSaved>
+  <Version>15.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>9735</WindowHeight>
+  <WindowWidth>24000</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s108" ss:Name="Normal 2">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s66" ss:Name="Normal 3">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s110" ss:Parent="s66">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+  </Style>
+  <Style ss:ID="s111" ss:Parent="s66">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
+    ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s112" ss:Parent="s108">
+   <Borders/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Goals">
+  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="17" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="15">
+   <Column ss:AutoFitWidth="0" ss:Width="75"/>
+   <Column ss:AutoFitWidth="0" ss:Width="425.25"/>
+   <Column ss:AutoFitWidth="0" ss:Width="100.5"/>
+   <Column ss:AutoFitWidth="0" ss:Width="103.5"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s111"><Data ss:Type="String">SMF </Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">SMF- Description</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">SAFETY CASE</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">Module</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">Completed</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">Goal ID</Data></Cell>
+    <Cell ss:StyleID="s111"><Data ss:Type="String">ASSUMPTION ID</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">SMF-103</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">The Mission Control system shall fix the concurrency issues</Data></Cell>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">MC</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">x</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">G02</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">A-8</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">SMF-98</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">The Mission Control System shall find the nearest destination next to the current target.</Data></Cell>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">MC</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">x</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">G01 / G02</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">A-12 / A-9 / A-5</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">SMF-93</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">The Mission Control shall calculate distance and time for each mission given GPS coordinates and drone speed.</Data></Cell>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">MC</Data></Cell>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">G02</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">A-12 / A-5</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">SMF-99</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">The Mission Control System shall create a flight zone</Data></Cell>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">MC</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">x</Data></Cell>
+    <Cell ss:StyleID="s112"><Data ss:Type="String">G02 / G03</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">A-6</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">SMF-97</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">The Mission Control System shall process multiple tickets</Data></Cell>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">MC</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">x</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">G04</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">A-4</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">SMF-102</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">Ground Station shall command drones using Guided Mode</Data></Cell>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">GC</Data></Cell>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">G02</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">A-4</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">SMF-104</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">Ground Station shall assign multiple drop locations to a drone</Data></Cell>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">GC</Data></Cell>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">G02</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">A-4</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">SMF-96</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">The System shall pass updated pin coordinates to the ticketing system via JSON post request</Data></Cell>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">x</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">G04</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">A-12 / A-4 / A-3</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">SMF-94</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">The application shall have an embedded Google Map that shows the users current location.</Data></Cell>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">x</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">G05</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">A-12</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">SMF-95</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">The embedded Google Map shall allow the user to change where the drone request originates from (using &quot;pin drop&quot; functionality).</Data></Cell>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">x</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">G02 / G04</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">A-12 / A-2</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">SMF-105</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">Project Needs to have keystore file for Google API</Data></Cell>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">G04</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">A-12</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">SMF-106</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">Multiple Pins dropped on location refresh</Data></Cell>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">PA</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">x</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">G04</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">A-12</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">SMF-81</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">While The system is running the website must update in real time</Data></Cell>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">W</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">x</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">G05</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">A-12 / A-5 / A-4</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">SMF-88</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">Develop functional testing platform for Med-Fleet System</Data></Cell>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">ST</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">x</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">G03</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">A-10 / A-4 / A-3</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">SMF-91</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">Verify All Requirements of Sprint 2</Data></Cell>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">ST</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">x</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">G03</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">A-10 / A-5</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s66"><Data ss:Type="String">SMF-92</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">Implement Monitoring System for all components</Data></Cell>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">ST</Data></Cell>
+    <Cell ss:StyleID="s66"/>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">G03</Data></Cell>
+    <Cell ss:StyleID="s110"><Data ss:Type="String">A-10 / A-8</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Unsynced/>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>18</ActiveRow>
+     <ActiveCol>1</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

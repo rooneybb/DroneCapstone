@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<meta charset="UTF-8">
+    <title>MedFleet</title>
+</head>
+<body>
+<div id ="overview">
+<h2>Project Overview</h2>
+<p>The Med Fleet project uses a fleet of drones to deliver medical kits to users that request assistance.  The requests originate from a mobile application that uses GPS to identify the current location of the user that needs help.  The incoming requests are then prioritized, scheduled, and assigned to one of the drones in the fleet.  The drone is then dispatched to deliver the medical kit to the GPS coordinates.  Example applications include: </p>
+<ul>
+	<li>Natural Disaster - Victims of an earthquake can request assistance when emergency services in the area are fully utilized.</li>
+	<li>State Park or Ski Mountain - Hikers, Campers, or Skiers that have a serious injury in a remote location can request medical assistance.</li>
+</ul>
+<p>The technical considerations for the project were substantial and the architectural decisions were left entirely up to the team members (more on this later).  Another domain that warranted serious consideration were the saftey concerns associated to this project.  Not only are users relying on the application for time sensitive medical support, flying drones opens up many saftey concerns to anything in the area (personal injury, property damage, etc).  The challenge lied in finding a balance of resources to build out the technology while emphasizing saftey in all layers of the application.
+<p>It's worth noting that our implementation of this application uses inexpensive quadcopters that are capable of flying for about 20 minutes (our drones also don't support carrying a payload).  Our implementation was primarily to simulate how more robust drones would be programed, organized, and dispatched.
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+</html>

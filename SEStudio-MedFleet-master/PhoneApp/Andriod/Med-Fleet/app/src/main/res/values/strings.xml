@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Med-Fleet</string>
+    <string name="mainText">Welcome to Med-Fleet \n\n Please rank the severity of your emergency (1 = Mild, 5 = Severe).  You will select your location on the next screen.</string>
+    <string name="success">We have successfully received your request.  Your Med-Fleet kit should be arriving shortly.</string>
+    <string name="failure">There was a problem receiving your request.  Please resubmit.</string>
+    <string name="alert">You are requesting that we dispatch a drone carrying a Med kit to the location you provided.  Please confirm or deny this request below: </string>
+    <string name="urlPost">http://40.77.67.165:3000/tickets</string>
+    <string name="title_activity_open_map">OpenMap</string>
+    <string name="title_activity_finish">Finish</string>
+    <string name="displayText">Default Display Text</string>
+</resources>

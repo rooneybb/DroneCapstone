@@ -1,0 +1,18 @@
+
+<h3>Drones</h3>
+<table class="table table-striped">
+    <tr>
+        <th>latitude</th>
+        <th>longitude</th>
+        <th>altitude</th>
+        <th>armed</th>
+        <th>mode</th>
+    </tr>
+    <tr *ngFor="let drone of drones">
+        <td>{{drone.latitude}}</td>
+        <td>{{drone.longitude}}</td>
+        <td>{{drone.altitude}}</td>
+        <td>{{drone.armed}}</td>
+        <td>{{drone.mode}}</td>
+    </tr>
+</table>

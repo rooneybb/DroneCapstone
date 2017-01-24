@@ -1,0 +1,72 @@
+{
+    "type": "FeatureCollection",
+    "features": [{
+        "type": "Feature",
+        "id": "1",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-80.87088507656375,
+                35.21515162500578
+            ]
+        },
+        "properties": {
+            "is_a": "drone"
+        }
+    }, {
+        "type": "Feature",
+        "id": "2",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-81.83775386582222,
+                37.24980190252168
+            ]
+        },
+        "properties": {
+            "is_a": "drone"
+        }
+    }, {
+        "type": "Feature",
+        "id": "3",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-82.87088507656375,
+                37.21515162500578
+            ]
+        },
+        "properties": {
+            "is_a": "drop_site"
+        }
+    }, {
+        "type": "Feature",
+        "id": "4",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [-80.83775386582222,
+                38.24980190252168
+            ]
+        },
+        "properties": {
+            "is_a": "base_station"
+        }
+    }, {
+        "type": "Feature",
+        "id" : "5",
+        "geometry": {
+            "type": "LineString",
+            "coordinates": [
+                [-80.87088507656375,
+                    35.21515162500578
+                ],
+                [-82.87088507656375,
+                    37.21515162500578
+                ]
+            ]
+        },
+        "properties": {
+            "is_a": "flight path",
+            "mission": "save a dude",
+            "drone": "the big drone",
+            "site": "the one with the f'd up dude"
+        }
+    } ]
+}

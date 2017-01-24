@@ -1,0 +1,17 @@
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/"><img class="center-block" alt="Medfleet Monitor" src="./public/media/logo.png"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a [routerLink]="['Dashboard']"><h3>Dashboard</h3></a></li>
+                <li><a [routerLink]="['DronesList']"><h3>DronesList</h3></a></li>
+                <li><a [routerLink]="['TicketList']"><h3>Ticketlist</h3></a></li>
+                <li><a [routerLink]="['Map']"><h3>Map</h3></a></li>
+            </ul>
+       </div>   
+             
+  </div>
+</nav> 
+<router-outlet></router-outlet>

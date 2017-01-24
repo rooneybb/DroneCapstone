@@ -1,0 +1,17 @@
+<h3>Tickets</h3>
+<table class="table table-striped">
+    <tr>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>Urgency</th>
+        <th>Status</th>
+    </tr>
+
+    <tr *ngFor="let ticket of tickets">
+        <td>{{ticket.latitude}}</td>
+        <td>{{ticket.longitude}}</td>
+        <td>{{ticket.urgency}}</td>
+        <td>{{ticket.status}}</td>
+    </tr>
+</table>
+

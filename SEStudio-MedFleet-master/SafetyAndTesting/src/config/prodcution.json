@@ -1,0 +1,22 @@
+{
+    wl: {
+        ip: 'http://127.0.0.1:3000/',
+        port: 3000,
+        drones_url: 'drones/',
+        tickets_url: 'tickets/',
+        ticket_url_by_status: 'tickets/status/'
+    },
+    wl_listener: {
+        port: 2570
+    },
+    gc_listener: {
+        port: 20005
+    },
+    drones: { },
+    log: { },
+    how_to_setup {
+        getEnv: 'System.getenv(quoteTARGET_ENV\quote)',
+        getjsonfile: '/WEB-INF/configuration+targetEnvironment+.properties',
+        loadStuff: 'load it'
+    }
+}

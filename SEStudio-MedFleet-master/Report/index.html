@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<meta charset="UTF-8">
+    <title>MedFleet</title>
+</head>
+<body>
+<img class="media-object" src="./media/med_fleet_logo.png" alt="...">
+<h1>Med Fleet Project</h1><br>
+<h3>Table of Contents</h3>
+<ol>
+	<li><a href="index.html#overview">Project Overview</a></li>
+	<li><a href="index.html#requierments">Project Requierments</a></li>
+	<li><a href="index.html#safety">Safety Analysis</a></li>
+	<li><a href="index.html#architecture">Architectural design</a></li>
+	<li><a href="index.html#testing">Testing</a></li>
+	<li><a href="index.html#stories">Overview of User Stories</a></li>
+	<li><a href="index.html#future">Future Plans</a></li>
+    <li><a href="index.html#appendixA">Appendix A - User Stories</a></li>
+    <li><a href="index.html#appendixB">Appendix B - Glossary</a></li>
+    <li><a href="index.html#appendixC">Appendix C - GitHub Link</a></li>
+</ol>
+<div id ="overview">
+<h1>Project Overview</h1>
+<p>The Med Fleet project uses a fleet of drones to deliver medical kits to users that request assistance.  The requests originate from a mobile application that uses GPS to identify the current location of the user that needs help.  The incoming requests are then prioritized, scheduled, and assigned to one of the drones in the fleet.  The drone is then dispatched to deliver the medical kit to the GPS coordinates.  Example applications include: </p>
+<ul>
+	<li>Natural Disaster - Victims of an earthquake can request assistance when emergency services in the area are fully utilized.</li>
+	<li>State Park or Ski Mountain - Hikers, Campers, or Skiers that have a serious injury in a remote location can request medical assistance.</li>
+</ul>
+<p>The technical considerations for the project were substantial and the architectural decisions were left entirely up to the team members (more on this later).  Another domain that warranted serious consideration were the saftey concerns associated to this project.  Not only are users relying on the application for time sensitive medical support, flying drones opens up many saftey concerns to anything in the area (personal injury, property damage, etc).  The challenge lied in finding a balance of resources to build out the technology while emphasizing saftey in all layers of the application.</p>
+<p>It's worth noting that our implementation of this application uses inexpensive quadcopters that are capable of flying for about 20 minutes (our drones also don't support carrying a payload).  Our implementation was primarily to simulate how more robust drones would be programed, organized, and dispatched.</p>
+<br>
+
+<div id ="requierments">
+<h1>Project Requierments</h1>
+<p>This project was unique as it was the student’s responsibility to both set the project requirements as well as implement the application (whereas requirements are typically set by the end users or product owners and not the developers).  This type of scenario demanded that the Med-Fleet team be both ambitious yet realistic.  One major advantage we had was our agile development methodology, which allowed us to reprioritize our focus from sprint to sprint.  Rather than trying to lay out all our requirements upfront and handcuff ourselves to a static project plan; we were able to shift our requirements as we saw fit.  A more thorough break down of our user stories is provided in a later section but the below table summarizes the major project requirements across each sprint:</p>
+
+<table class="table table-striped">
+<tr>
+    <th>Sprint</th>
+    <th>Requirements</th>
+</tr>
+<tr>
+  <td>Proof of Concept (Sprint 1)</td>
+  <td>The major requirement we had for Sprint 1 was to get all systems talking to each other and passing JSON data across each module.  Our primary objective was to submit a request using the mobile app and have the drone successfully execute a round trip to the user.</td>
+</tr>
+<tr>
+  <td>Sprint 2</td>
+  <td>In Sprint 2 we built out our mobile app to allow users to be able to select where to send the drone.  Additionally, we implemented functionality to allow the drones to make multiple user drops on a single trip.</td>
+</tr>
+<tr>
+  <td>Sprint 3</td>
+  <td>The main goals of Sprint 3 were to support the concurrent dispatching of multiple drones to fulfill multiple tickets.</td>
+</tr>
+</table>
+<br>
+
+<div id="safety">
+<h1>
+Safety Analysis
+</h1><p>
+The Med-Fleet team undertook this project with the understanding that the Med-Fleet system would need to meet the stringent requirements of a Safety-Critical system.  One of the main goals of all three of our sprints was to ensure great emphasis was placed on not only the thorough analyzation of all potential risks, but also taking the proper precautions to mitigate such risks.  Unfortunately due to lack of resources and time, many of these policies were unfortunately only theoretical in nature, however that does not take away their overall importance and effect they had on the design of the Med-Fleet system.  Nonetheless, the Med-Fleet team was able to put their best effort towards incorporating as many tangible safety features as proved feasible.
+</p><p>
+The Med-Fleet system is considered a Safety-Critical system for the potential consequences that a failure of the system could cause, with a worse-case scenario being fatal.  In addition to the grave consequences any number of errors could cause, Med-Fleet also operates within two highly regulated fields, the aerospace and medical industries.  With strict oversight from agencies such as the Federal Aviation Administration (FAA) and Centers for Medicare and Medicaid (CMM) whom enforces the Health Insurance Portability and Accountability Act (HIPAA), the Med-Fleet system is burdened with even further liability.
+</p><p>
+To address these important issues, at the beginning of the project, the team created a Failure Mode Effects and Criticality Analysis (FMECA).  In this document, the team addressed many of the possible issues that the system could experience.  These issues were then further dissected to better understand the effects the system might experience and the likely causes behind these problems.  With this comprehensive review of the conceivable flaws in the Med-Fleet system, the team was better able to grasp the necessary steps to rid, if possible, or otherwise relieve any potential negative impact.  The Med-Fleet team prepared for a wide scope of possible system failures. From the seemingly ridiculous, like an eagle attack on a drone, to the more realistic, such as a server crashing, the team’s goal had been to create a system prepared to handle all negative scenarios.  Through such analysis the Med-Fleet team was able to incorporate rigid safety features into the design of all aspects of the system.  This approach affords the Med-Fleet system an easier path to appeasing FAA and CMM requirements when scaling up to a full production environment in the future.
+</p><p>
+As the team moved forward and began to integrate such safety precautions into the Med-Fleet system, the major problems were partitioned into three separate categories so that each issue could be approached in a more efficient manner.  The three categories were hardware, software, and regulatory issues.
+</p><p>
+To attack hardware related issues, the Med-Fleet team employed numerous techniques.  A lightweight-monitoring platform watching over several aspects of our system was set up through a Jenkins server.  Our Med-Fleet monitor was created to watch over drones in real-time as they are deployed on missions.  This could be used to manually override any major issues in the future, much like radar for an air-traffic controller.  In addition to monitoring, physical inspection of drones were conducted before all flights.  For the phone app many different android devices were used to check for any OS compatibility issues.  In addition to these proactive steps, the Med-Fleet team also set up two field tests to inspect the system as a whole.  The overall goal, although unachievable due to lack of time and resources, would be to ensure that the Med-Fleet system is not only highly available, but also in the case of down time, to have a full failover system set up.  As the team found out when the main server became inaccessible during one of the sprints, the entire Med-Fleet codebase is already very portable, allowing for easier migration if a failover was in place.  In addition to these necessities, it would be vital to set up extensive monitoring of services, memory, and performance of all servers that are a part of the Med-Fleet system.
+</p><p>
+Software issues were initially addressed by the developers, whom put their respective code through numerous tests.  Upon release to GitHub, black-box testing was able to be done by other members of the team.  The Jenkins server used for monitoring also served as an automated testing platform for several aspects of the med-Fleet system. However the most critical resource the MedFleet team was able to use for software testing was a drone simulation program called Software in the Loop (SITL).  By syncing up the Med-Fleet system to SITL, the team was able to continuously test changes to code in a near realistic environment. The Med-Fleet team looked at the simulations completed in SITL as confidence that code was behaving as expected.  Leveraging the success of these analyses allowed the team to conduct the field tests mentioned above.  This site’s testing section gives a general overview of other techniques also used to ensure proper functionality of the Med-Fleet system.
+</p><p>
+The Med-Fleet team was probably the least successful in implementing solutions to Regulatory issues as they are rather extensive and complicated to understand without legal aid.  Rather than neglecting these completely, the Med-Fleet team placed a large emphasis on the importance of safety throughout development.  While maintaining an agile environment during our sprints, it was noted that to best implement safety features, a more structural waterfall like process should be in place to gather such requirements.  Through this hybrid approach to the design of a Safety-Critical system, it was easier to ensure certain safety requirements were taken into account by developers before creating code.  Some of the self-imposed restrictions the Med-Fleet team planned development around, were all drones needed to be assigned different flying altitudes, separate base stations, and specific flying zones to ensure that even in error the chances of a drone crash would be further limited. Self-imposed regulations such as these not only helped to create a safer system, but also shortened development time, as safety features did not have to be hacked in to an existing codebase, possibly creating even further trouble in the process. Through the employment of such a proactive attitude in preventing software and hardware issues at the beginning of development, the Med-Fleet team theorizes that many of the potential regulatory issues, which would affect a more mature Med-Fleet system, can be largely mitigated.
+</p>
+</div>
+<br>
+
+<div id ="architecture">
+<h1>Architectural design</h1>
+<p>The Med Fleet system is composed of six separate modules that all communicate with each other using JSON.  Each one of these sections is described below:</p>
+<h3>Mobile Application</h3>
+<p>The Med-Fleet process starts when a user requests assistance using the Android mobile application.  The user is required to specify the severity of their emergency as well as their current location.  When the user presses ‘submit’ the mobile app sends a JSON Post request to the ticketing system (the post request contains the users GPS coordinates as well as the severity of their emergency).  The application was built using Android Studio and SDK Version 23 (Marshmallow).</p>
+<h3>Ticketing System</h3>
+<p>The ticketing system was developed using the MongoDB, Express, Angular, and Node.js (MEAN) stack.  It listens for requests on an open port and when it receives one, it parses the JSON and logs the data as a ticket into a MongoDB.  The system currently sits on an instance of Microsoft Server 2012 residing in Azure.</p>
+<h3>Mission Control</h3>
+<p>Mission Control’s primary purpose is to plan missions, schedule drones, and to communicate with Ground Control.  Its process starts by accepting connection requests from one or more Ground Control instances (the Java application uses multiple threads and gives each Ground Control instance its own thread).  </p>
+<p>When Mission Control detects a new ticket, it decides which Ground Control instance should receive the ticket, makes sure the GPS coordinates are within the safety adherence zone, creates a route for the drone, and communicates the route to the Ground Control system.</p>
+<p>Once Mission Control has passed all of this information to the Ground Station, it then listens for Ground Control to pass back data about the drones mission; Mission Control is responsible for taking this data and injecting it into the MongoDB.</p>
+<h3>Ground Control</h3>
+<p>Ground Control is a python based application whose primary responsibility is communicating with and scheduling the drones.  The application interfaces with the drones via the DRONE KIT API (<a href="http://dronekit.io/">http://dronekit.io/</a>)</p>
+<p>The Ground Control system starts by opening up a socket with Mission Control and listening for new missions.  When a new mission comes in, Ground Control dispatches the drone to the GPS coordinates provided by Mission Control.  Ground Control receives real time flight data from the drone; including, latitude, longitude, altitude, speed, etc.  This information is received and passed back to Mission Control for entry into the database.</p>
+<h3>Med Fleet Monitor</h3>
+<p>The Med-fleet Monitor is a web application built using Angular 2. It allows users to view the current status of Tickets and Drones via the google maps API and tables. This data is constantly updating giving users a near real time view of unfolding events.</p>
+<p>The below image provides a high level representation of how a request enters the system and leads to a drone being dispatched.
+<img class="media-object" src="./media/Technology_Architecture_Review.gif" alt="...">
+
+<div id="testing">
+<h1>Testing</h1>
+<p>The Med-Fleet system was subject to rigorous testing throughout each sprint. Due to the designation of it being a Safety-Critical system, the entire team understood the importance of such practice. With this thorough focus the Med-Fleet team was able to confidently work up to real-life simulations of the system in the deployment of two quarterly field tests. The Med-Fleet system is still not ready for production, as Safety-Critical systems, need to prove themselves nearly flawless. However all of the progress made towards a goal of moving to a beta-testing environment, can be widely attributed to the extensive testing already in place. The table below helps to give a brief overview of the many different types of testing used by the Med-Fleet team. </p>
+<br>
+<table class="table table-striped">
+<tr>
+    <th>Testing Type          </th>
+    <th>Schedule</th>
+    <th>Remarks</th>
+</tr>
+<tr>
+    <td>
+        <ul>
+        <li>Static Testing</li>
+        <li>Unit Testing</li>
+        <li>Decision Coverage Testing</li>
+        <li>Stress Testing</li>
+    </ul>
+    </td>
+    <td>Ad Hoc</td>
+    <td>
+        <ul>
+        <li>Developers in charge of deploying to their own code</li>
+        <li>Pair-Programming employed</li>
+        </ul>
+    </td>
+</tr>
+
+
+<tr>
+    <td>
+        <ul>
+        <li>Component Testing</li>
+        <li>Integration Testing</li>
+        <li>Error-Handling Testing</li>
+        <li>Performance Testing</li>
+        <li>Functional Testing</li>
+        <li>Compatibility Testing</li>
+    </ul>
+    </td>
+    <td>Weekly</td>
+    <td>
+        <ul>
+        <li>Software in the Loop, a Real-Time Drone Flight Simulator was used to replicate Med-Fleet missions</li>
+        <li>Many different Android devices were used in testing</li>
+        </ul>
+    </td>
+</tr>
+<tr>
+    <td>
+        Field Test
+        <ul>
+        <li>System Testing</li>
+        <li>Alpha Testing</li>
+        <li>Concurrency Testing</li>
+    </ul>
+    </td>
+    <td>Quarterly</td>
+    <td>
+    <ul>
+    <li>Proof of Concept</li>
+    <li>Verified all Med-Fleet components were communicating properly</li>
+    </ul>
+    </td>
+</tr>
+<tr>
+    <td>
+        Jenkins Server:
+        <ul>
+        <li>Testing Platform</li>
+        <li>Lightweight Monitoring</li>
+        <li>Fully Automated</li>
+    </ul>
+    </td>
+    <td>GitHub Polling, Specified Intervals</td>
+    <td>
+        <ul>
+            <li>Provided continuously integrated testing</li>
+            <li>Allowed for secondary, software oriented, monitoring platform in addition to drone focused Med-Fleet monitor</li>
+        </ul>
+    </td>
+</tr>
+</table>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kBaiB2tVZNk" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/laRXModDRB0" frameborder="0" allowfullscreen></iframe>
+<br>
+
+<div id="stories">
+  <h1>Overview of User Stories</h1>
+  <p>Each user story is related to one or more of the following use cases:</p>
+    <ul>
+        <li>Request Assistance (UC#01)</li>
+        <li>Delivery of Medical Packages (UC#02)</li>
+        <li>Med-Fleet Monitor (UC#03)</li>
+        <li>Drones rerouted to speed up delivery to all sites (UC#04)</li>
+        <li>Drone Changes altitude to avoid hitting other drone (UC#05)</li>
+    </ul>
+
+    <p>The first sprint was the proof of concept sprint. &nbsp;In this sprint, we created the basic version of the phone app to send the severity and GPS location of the phone to the ticketing system. &nbsp;A basic framework of mission control was developed
+        to handle one drone with one mission. &nbsp;The goal of our first sprint was to complete a single mission.</p>
+    </p>
+    <p>The second sprint was to build on top of the proof of concept. &nbsp;In this sprint, we were able to update the phone app to integrate Google maps with a drop pin interface to give user provided GPS coordinates. &nbsp;Mission control and Ground Control were scaled to accomodate multiple missions for a single drone on a single trip.</p>
+    </p>
+    <p>The third sprint was dedicated to scaling out to multiple drones working on multiple missions. &nbsp;We updated the phone app to confirm the GPS coordinates before sending a request. &nbsp;We included additional calculations to integrate distance and speed for mission control to generate the flight path for multiple drones.</p>
+    <p>For a complete breakdown of our user stories by Sprint, please see <a href="index.html#appendixA">Appendix A.</a></p>
+  <br>
+
+<div id="future">
+<h1>Future Plans:</h1>
+
+<div class="media">
+  <div class="media-left media-top">
+    <a href="#">
+      <img class="media-object" src="./media/sc.png" alt="...">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Safety Controller</h4>
+    To be able to fly drones in overlapping areas, a safety controller needs to be added. This would track flight paths, making sure they would not crash into one another. Upon completion of the safety controller the main features of the modules would be fully implemented, allowing for full end-to-end testing.
+  </div>
+</div>
+
+<div class="media">
+  <div class="media-left media-top">
+    <a href="#">
+      <img class="media-object" src="./media/b1_0.png" alt="...">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Milestone: Beta 1.0</h4>
+    At this point, the system has scaled-up to include multiple drop sites with multiple drones sharing air space. Reaching this milestone has allowed the system to bump to a beta-1 version, however thorough testing including code analysis and refactoring is required to create a more stable system. Upon completion, the system will be moved to beta version 1.1.
+  </div>
+</div>
+
+<div class="media">
+  <div class="media-left media-top">
+    <a href="#">
+      <img class="media-object" src="./media/b1_1.png" alt="...">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Service Pack</h4>
+    Once stable, the system should scale up to allow multiple ground stations. This feature would allow drones to fly in much larger areas because they would not be limited by the range of a single ground station.
+  </div>
+</div>
+
+<div class="media">
+  <div class="media-left media-top">
+    <a href="#">
+      <img class="media-object" src="./media/multi_gc.png" alt="...">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Milestone: beta 2.0</h4>
+    All of these sprints would allow the system to progress from beta-1 to beta-2 stage. At this point it would be nice to add an iPhone App. Another major goal, could be to create an advanced flight simulator. The simulator could be used to push the limits of the system, refine Mission Controls algorithms and ensure Safety controller is keeping the skies safe and the drones dry.
+  </div>
+</div>
+
+</div>
+<div id="appendixA">
+    <h1>Appendix A - User Stories by Sprint</h1>
+<p>The below table was exported from our Project Management software (Jira) and represents how each user story is tied back to a use case.</p>
+<h2>Sprint 1 - Proof Of Concept</h2>
+    <table class="table table-striped">
+        <th>User Stories</th>
+        <th>UC#01</th>
+        <th>UC#02</th>
+        <th>UC#03</th>
+        <th>UC#04</th>
+        <th>UC#05</th>
+        <tr>
+            <td>Mission Control needs to establish communication with GroundControl System</td>
+            <td></td>
+            <td>x</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Mission Control shall sort unassigned ticket queue</td>
+            <td></td>
+            <td>x</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Ground Station Shall Connect to Drones</td>
+            <td></td>
+            <td>x</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Ground Station Shall Send drone on mission</td>
+            <td></td>
+            <td>x</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>When there are unassigned tickets, Mission Control shall place them in unassigned request queue.</td>
+            <td></td>
+            <td>x</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>While any component is operational it shall send a signal to the system to confirm it is online</td>
+            <td></td>
+            <td>x</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>While any drone/sites/base stations are active the gui shall display all relevant data</td>
+            <td></td>
+            <td>x</td>
+            <td>x</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>While drones are flying Ground Control shall send data to Mission Control.</td>
+            <td></td>
+            <td></td>
+            <td>x</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>While the Ground Control is connected to drones, the Ground Control shall receive data from Mission Control.</td>
+            <td></td>
+            <td>x</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>While the Ground Control is connected to drones, the Ground Control shall send data and commands to drones.</td>
+            <td></td>
+            <td>x</td>
+            <td></td>
+            <td>x</td>
+            <td>x</td>
+        <tr>
+            <td>While the System is running data stall be persistent</td>
+            <td>x</td>
+            <td>x</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <h2>Sprint 2</h2>
+    <table class="table table-striped">
+        <th>User Stories</th>
+        <th>UC#01</th>
+        <th>UC#02</th>
+        <th>UC#03</th>
+        <th>UC#04</th>
+        <th>UC#05</th>
+        <tr>
+            <td>Ground Station shall assign multiple drop locations to a drone</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>x</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Ground Station shall command drones using Guided Mode</td>
+            <td></td>
+            <td>x</td>
+            <td></td>
+            <td>x</td>
+            <td>x</td>
+        </tr>
+        <tr>
+            <td>The application shall have an embedded Google Map that shows the users current location.</td>
+            <td>x</td>
+            <td></td>
+            <td>x</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>The embedded Google Map shall allow the user to change where the drone request originates from (using "pin drop" functionality).</td>
+            <td>x</td>
+            <td></td>
+            <td>x</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>The Mission Control shall calculate distance and time for each mission given GPS coordinates and drone speed.</td>
+            <td></td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>The Mission Control System shall create a flight zone</td>
+            <td></td>
+            <td>x</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>The Mission Control System shall find the nearest destination next to the current target.</td>
+            <td></td>
+            <td>x</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>The Mission Control system shall fix the concurrency issues</td>
+            <td></td>
+            <td>x</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>The Mission Control System shall process multiple tickets</td>
+            <td></td>
+            <td>x</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>The System shall pass updated pin coordinates to the ticketing system via JSON post request</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>While The system is running the website must update in real time</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </table>
+
+    <h2>Sprint 3</h2>
+    <table class="table table-striped">
+        <th>User Stories</th>
+        <th>UC#01</th>
+        <th>UC#02</th>
+        <th>UC#03</th>
+        <th>UC#04</th>
+        <th>UC#05</th>
+        <tr>
+            <td>GroundControl shall receive confirmation from Drone upon MissionCompletion</td>
+            <td></td>
+            <td>x</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>GroundControl shall send missions to Drones</td>
+            <td></td>
+            <td>x</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Medfleet monitor shall show all relevant Drone and Mission information</td>
+            <td>x</td>
+            <td>x</td>
+            <td>x</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>PhoneApp shall add confirmation pop-up</td>
+            <td>x</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>The Database shall hold all global variables.</td>
+            <td></td>
+            <td>x</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>The Mission Control System shall process multiple tickets for multiple drones</td>
+            <td></td>
+            <td>x</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+
+
+</div>
+
+
+<div id="appendixB">
+<h1>Appendix B - Project Glossary</h1>
+  <dl>
+
+    <dt>2.4 Ghz</dt>
+    <dd> The frequency used by digital (spread spectrum) radio communications in our applications, including 2.4Ghz RC, Bluetooth and some video transmission equipment. This is a different band than the older 72 Mhz band that is used for analog RC communications.
+      To avoid radio frequency conflict is it often a good idea to use 72 Mhz radio equipment when you are using 2.4 Ghz onboard video transmitters, or use 900 Mhz video when using 2.4 Ghz RC equipment.</dd>
+    <dt>Accelerometer</dt>
+    <dd> A device that measures the acceleration forces in a certain direction. These devices are used to stabilize quadcoptors, many times in windy conditions.</dd>
+    <dt>Alert</dt>
+    <dd> Call for Help. Comes in with a priority, and GPS location, when received a Alert ID </dd>
+    <dt>Alert ID (AID) </dt>
+    <dd> ID of an alert.</dd>
+    <dt>Alert Systems </dt>
+    <dd>Systems used to create and send alerts to the Mission Control </dd>
+    <dt>Altitude (ALT)</dt>
+    <dd> The vertical distance you are from ground.</dd>
+    <dt>AMA</dt>
+    <dd> Academy of Model Aeronautics. The main US model aircraft association. The AMA works closely with the Federal Aviation Administration (FAA) to establish reasonable rules for the use of amateur UAVs.  Each AMA chapter and field may have slightly different
+      policies, but it’s possible to fly and test air frames and some technology on AMA fields without violating the association’s (or FAA/NAS) rules.</dd>
+    <dt>Arducopter</dt>
+    <dd> A flight controller firmware software.</dd>
+    <dt>Barometric Pressure Sensor</dt>
+    <dd> This device used barometric readings to determine the altitude of the aircraft. It can help drones to be able to calculate their height above the ground, along with using combinations of other sensors.</dd>
+    <dt>BNF</dt>
+    <dd> Bind N Fly. The unit is ready to bind to the transmitter and fly.</dd>
+    <dt>Brushless Motor</dt>
+    <dd> These motors have permanent magnets that rotate around a fixed armature, which eliminates any problems that could be associated with connecting current regarding a moving part. The brushless motors are much more efficient and hardy than brushed motors.</dd>
+    <dt>Center of Gravity (CG)</dt>
+    <dd> This is the point of balance of the unit. It needs to be maintained whenever you add various batteries, mounts, cameras or other accessories to the unit.</dd>
+    <dt>Controller</dt>
+    <dd> The handheld device that is used by the drone pilot that is used to control the drone and the quadcopter. Controllers are also called transmitters.</dd>
+    <dt>Copter</dt>
+    <dd> Rotary-wing autopilot software variant of the ArduPilot project.</dd>
+    <dt>Drone</dt>
+    <dd> An unmanned aircraft that is guided remotely by a pilot.</dd>
+    <dt>Drone ID (DID) </dt>
+    <dd> id of a drone</dd>
+    <dt>Drone Run (DRun) </dt>
+    <dd>scheduled run of a drone from leaving base to return</dd>
+    <dt>DroneKit (DK)</dt>
+    <dd> allows developers to create apps that run on an onboard companion computer and communicate with the ArduPilot flight controller using a low-latency link.</dd>
+    <dt>Electronic Speed Control (ESC)</dt>
+    <dd> The ESC is used to convert signal from Flight controller or radio receiver, and apply the right current to the electric motors.</dd>
+    <dt>Elevator</dt>
+    <dd> Also known as pitch.</dd>
+    <dt>Federal Aviation Administration (FAA)</dt>
+    <dd> A United States Department of Transportation Agency, it has authority to regulate and oversee all aspects of American civil aviation.</dd>
+    <dt>First Person View (FPV)</dt>
+    <dd> A technique that uses an onboard FPV camera and wireless connection, to allow a pilot on the ground to see a live stream video while flying, through a FPV goggle or monitor.</dd>
+    <dt>Flight Control </dt>
+    <dd> System used to fly drones.</dd>
+    <dt>Flight Controller</dt>
+    <dd> the brain of your multirotor. System used to keep track Alerts, schedule drones.</dd>
+    <dt>GCS</dt>
+    <dd> Ground Control Station. Software running on a computer on the ground that receives telemetry information from an airborne UAV and displays its progress and status, often including video and other sensor data. Can also be used to transmit in-flight commands
+      to the UAV.</dd>
+    <dt>Global Positioning System (GPS)</dt>
+    <dd> Used to track movement or hold position at pre-defined coordinates.</dd>
+    <dt>Gyroscope (GYRO)</dt>
+    <dd> Provides the angular velocity around 3 axes of space in degrees. Assists with keeping a quadcopter level and facing the same direction.</dd>
+    <dt>Lithium Polymer Battery (LIPO)</dt>
+    <dd> Aka LiPoly. Most used power source for RC Hobby these days because of its high energy storage density-to-weight.</dd>
+    <dt>mAh</dt>
+    <dd> milliampere-hour – measure of the current generated by a battery. Quadcopter batteries range from 50 mAh to 5000+ mAh.</dd>
+    <dt>MAVLink. </dt>
+    <dd>The Micro Air Vehicle communications protocol used by the Copter and Plane line of autopilots. See here for more info on MAVLink.</dd>
+    <dt>MAVProxy</dt>
+    <dd> a fully-functioning GCS for UAV’s. The intent is for a minimalist, portable and extendable GCS for any UAV supporting the MAVLink protocol (such as the APM).</dd>
+    <dt>Mission Planner</dt>
+    <dd> Is a full-featured ground station application for the ArduPilot open source autopilot project.</dd>
+    <dt>Multicopter</dt>
+    <dd> Aerial drone with multiple horizontal propellers, also known as rotors. Depending on the number of rotors, we can have tricopters, quadcopters, hexacopters, and octocopters and so on.</dd>
+    <dt>On Screen Display (OSD)</dt>
+    <dd>  A piece of hardware that overlays flight data in text or graphical form over an existing live stream video.</dd>
+    <dt>Payload</dt>
+    <dd> The maximum additional weight a drone is able to lift, besides its own weight and the weight of its batteries.</dd>
+    <dt>PX4 (PX4FMU and PX4IO)</dt>
+    <dd> Flight Controller system providing capabilities for stabilized flight, position maintenance and automated mission (waypoint) path following.</dd>
+    <dt>Quadcopter (QUAD)</dt>
+    <dd> A type of multicopter that has 4 motors, no servos, all motors on same level.</dd>
+    <dt>R/C</dt>
+    <dd> Synonym for Radio Controlled.</dd>
+    <dt>Radio Control (RC)</dt>
+    <dd> A device used to control remote controlled vehicles.</dd>
+    <dt>Radio Frequency (RF)</dt>
+    <dd> Common frequency bands RC hobby use are 5.8gHz, 2.4gHz, 1.2gHz, 433mHz, 900mHz Not all bands are available in all countries, and some require a HAM (Amateur Radio Operator) license.</dd>
+    <dt>Radio Receiver (RX)</dt>
+    <dd> A device that receives commands from our radio Transmitter, and sends them directly to the servos or to the Flight Controller.</dd>
+    <dt>Ready to Fly (RTF)</dt>
+    <dd> Refers to the multicopter you buy has everything you need to start flying. You just open up the packaging, charge and install the batteries, and off you go.</dd>
+    <dt>Return To Launch (RTL)</dt>
+    <dd> A GPS feature that when enabled, it returns the aircraft to the “home” position where it took off.</dd>
+    <dt>Revolutions per minute (RPM)</dt>
+    <dd> the number of times a motor shaft rotates a full cycle in 60 seconds.</dd>
+    <dt>Rudder (RUD)</dt>
+    <dd> Also known as yaw.</dd>
+    <dt>Servo</dt>
+    <dd> A shorter name for servomotor or servomechanism. Aerial vehicles use servomotors for various functions such as pan cameras and wing flaps adjustments which can be controlled from the ground.</dd>
+    <dt>Software-in-the-loop (SITL)</dt>
+    <dd> Can be viewed as Simulation-based Software Evaluation. A software system can be executed under simulated input conditions for the purpose of evaluating how well the software system functions under such input conditions.</dd>
+    <dt>Telemetry System</dt>
+    <dd> A two way radio system to allow flight data to be sent from your aircraft and also to allow control or adjustment information to be sent back to it from a “ground station”, commonly a lap top computer. The 3DR telemetric radio is one such system.</dd>
+    <dt>Throttle</dt>
+    <dd> Controls on your radio transmitter, it changes the speed of the motors.</dd>
+    <dt>Transmitter (TX)</dt>
+    <dd> A device that sends our commands to the Receiver, controlled by the pilot.</dd>
+    <dt>Unmanned Aerial Vehicle (UAV)</dt>
+    <dd> Aircraft without a human pilot onboard. Control is provided by an onboard computer, remote control or combination of both.</dd>
+    <dt>Waypoint</dt>
+    <dd> A set of coordinates which define a point in space. Waypoints are useful in designing various autonomous missions for quadcopters. Mapping out would be impossible without a possibility to define these physical locations.</dd>
+    <dt>Yaw</dt>
+    <dd> Flight term used to describe the rotation of a drone around its center axis. Controls which direction the quadcopter is facing.
+
+  </dl>
+
+
+<div id="appendixC">
+<h1>Appendix C - GitHub Link</h1>
+<p>Below is a link to our GitHub Repository which contains Read Me's and source code for each module:<br>
+<a href="https://github.com/SAREC-Lab/SEStudio-MedFleet/blob/master/README.md">Med Fleet Git Hub Repository</a>
+</p>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+</html>
